@@ -18,30 +18,30 @@ jobs:
     env:
       PYTHON_VERSION: "${{ matrix.python-version }}"
       TESTS: "tests/"
-    
+
     strategy:
       # Prevent all build to stop if a single one fails
       fail-fast: false
-    
+
       matrix:
         name: [
-            python311-ubuntu2004,
-            python312-ubuntu2204,
-            python311-macOS
-          ]
-          include:
-          - name: python311-ubuntu2004
-            python-version: 3.11
-            os: ubuntu-20.04
+           python311-ubuntu2004,
+           python312-ubuntu2204,
+           python311-macOS
+        ]
+        include:
+        - name: python311-ubuntu2004
+          python-version: 3.11
+          os: ubuntu-20.04
 
-          - name: python312-ubuntu2204
-            python-version: 3.12
-            os: ubuntu-22.04
+        - name: python312-ubuntu2204
+          python-version: 3.12
+          os: ubuntu-22.04
 
-          - name: python311-macOS
-            python-version: 3.11
-            os: macos-latest
-  
+        - name: python311-macOS
+          python-version: 3.11
+          os: macos-latest
+
     steps:
     - name: Checkout simple_functions
       uses: actions/checkout@v4
