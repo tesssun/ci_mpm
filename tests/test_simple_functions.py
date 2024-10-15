@@ -1,4 +1,5 @@
-import pytest, numpy
+import pytest
+import numpy as np
 
 from simple_functions import my_sum, factorial, sin
 
