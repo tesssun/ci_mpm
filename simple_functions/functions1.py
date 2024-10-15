@@ -1,6 +1,6 @@
 __all__ = ['my_sum', 'factorial']
 
-from functionstools import cache
+from functools import cache
 
 
 def my_sum(iterable):
