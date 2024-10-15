@@ -20,4 +20,4 @@ def sin(x):
     y = 0
     for n in range(100):
         y = y + ((-1)**n * (x)**(2*n+1)) / factorial(2*n+1)
-        return y
+    return y
