@@ -27,11 +27,11 @@ class TestSimpleFunctions(object):
         assert answer == expected
     
     @pytest.mark.parametrize('number, expected', [
-        (5, numpy.sin(5)),
-        (3, numpy.sin(3)),
-        (1, numpy.sin(1))
+        (5, np.sin(5)),
+        (3, np.sin(3)),
+        (1, np.sin(1))
     ])
     def test_sin(self, number, expected):
         '''Test our factorial function'''
         answer = sin(number)
-        assert numpy.isclose(answer, expected, atol=1e-10)
+        assert np.isclose(answer, expected, atol=1e-10)
